@@ -16,9 +16,9 @@ TagManager:
   - HumanOnly
   - RobotOnly
   - TempCast
-  - 
-  - 
-  - 
+  - CollisionCategory1
+  - CollisionCategory2
+  - CollisionCategory3
   - 
   - 
   - 
