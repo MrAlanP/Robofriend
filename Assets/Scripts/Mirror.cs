@@ -7,7 +7,7 @@ public class Mirror : MonoBehaviour {
 	public MeshRenderer mirrorRenderer;
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame

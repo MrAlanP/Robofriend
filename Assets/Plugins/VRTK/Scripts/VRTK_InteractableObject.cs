@@ -198,7 +198,8 @@ namespace VRTK
         protected bool customTrackPoint = false;
         protected Transform originalControllerAttachPoint;
         protected Transform previousParent;
-        protected bool previousKinematicState;
+		[HideInInspector]
+        public bool previousKinematicState;
         protected bool previousIsGrabbable;
         protected bool forcedDropped;
         protected bool forceDisabled;
