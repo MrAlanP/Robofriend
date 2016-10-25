@@ -13,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - HumanOnly
-  - RobotOnly
+  - HumanRenderable
+  - RobotRenderable
   - TempCast
-  - CollisionCategory1
-  - CollisionCategory2
-  - CollisionCategory3
+  - Platforms
+  - Barrier
+  - 
   - 
   - 
   - 

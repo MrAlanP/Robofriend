@@ -2,7 +2,7 @@
 using System.Collections;
 using VRTK;
 
-public class Player : MonoBehaviour {
+public class HumanPlayer : MonoBehaviour {
 
 	private VRTK_InteractableObject interactableObject;
 	private SuperCharacterController characterController;
