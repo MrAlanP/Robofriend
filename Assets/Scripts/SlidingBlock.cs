@@ -6,6 +6,7 @@ public class SlidingBlock : MonoBehaviour {
 
 	public VRTK_InteractableObject handleInteractable;
 	public Rigidbody blockBody;
+	public GameObject mesh;
 
 
 	// Use this for initialization
@@ -18,6 +19,10 @@ public class SlidingBlock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (mesh != null) {
+			mesh.transform.localPosition = blockBody.gameObject.transform.localPosition;
+			mesh.transform.localRotation = blockBody.gameObject.transform.localRotation;
+		}
 
 	}
 
