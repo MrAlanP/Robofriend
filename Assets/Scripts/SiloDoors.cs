@@ -22,4 +22,9 @@ public class SiloDoors : MonoBehaviour {
 		leftDoor.transform.DOLocalMoveX(-11.0f, openSpeed);
 		rightDoor.transform.DOLocalMoveX(11.0f, openSpeed);
 	}
+	public void CloseDoors(){
+		//-11 left door, 11 right door
+		leftDoor.transform.DOLocalMoveX(0.0f, openSpeed);
+		rightDoor.transform.DOLocalMoveX(0.0f, openSpeed);
+	}
 }
