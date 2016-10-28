@@ -11,7 +11,7 @@ public class Lever : MonoBehaviour {
 
 	float startAngle = 0;
 	float leverAngleRange = 0;
-	float oldRatio = 0;
+	protected float leverRatio = 0;
 
 	bool hasDownActivated = false;
 	bool hasUpActivated = false;
@@ -44,7 +44,7 @@ public class Lever : MonoBehaviour {
 		UpdateLeverRatio ();
 	}
 
-	void UpdateLeverRatio(){
+	protected virtual void UpdateLeverRatio(){
 		float leverAngle = 0;
 		switch (lever.direction) {
 		case VRTK_Lever.LeverDirection.x:
@@ -63,19 +63,19 @@ public class Lever : MonoBehaviour {
 		float leverAngleFromMin = leverAngle - lever.minAngle;
 		float ratio = leverAngleFromMin / leverAngleRange;
 
-		if (ratio < 0.075f && oldRatio > 0.075f) {
+		if (ratio < 0.075f && leverRatio > 0.075f) {
 			if (OnLeverDown != null && (allowMultipleUses || !hasDownActivated)) {
 				OnLeverDown.Invoke ();
 				hasDownActivated = true;
 			}
 		}
-		else if (ratio > 0.925f && oldRatio > 0.925f) {
+		else if (ratio > 0.925f && leverRatio > 0.925f) {
 			if (OnLeverUp != null && (allowMultipleUses || !hasUpActivated)) {
 				OnLeverUp.Invoke ();
 				hasUpActivated = true;
 			}
 		}
-		oldRatio = ratio;
+		leverRatio = ratio;
 	}
 
 }
